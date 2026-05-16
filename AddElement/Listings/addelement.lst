@@ -1,0 +1,45 @@
+A51 MACRO ASSEMBLER  ADDELEMENT                                                           05/17/2026 00:00:49 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\addelement.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE addelement.s SET(SMALL) DEBUG PRINT(.\Listings\addelement.lst) OBJECT(.
+                      \Objects\addelement.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 802E              2     SJMP 0030H
+                       3     
+0030                   4     ORG 0030H
+                       5     
+0030 7834              6     MOV R0, #34H      ; R0 points to 34H
+0032 7935              7     MOV R1, #35H      ; R1 points to 35H
+                       8     
+0034 E6                9     MOV A, @R0        ; Load value from 34H into A
+0035 27               10     ADD A, @R1        ; Add value from 35H
+                      11     
+0036 FD               12     MOV R5, A         ; Store LSB in R5
+                      13     
+0037 7400             14     MOV A, #00H
+0039 3400             15     ADDC A, #00H      ; Get carry
+003B FE               16     MOV R6, A         ; Store MSB in R6
+                      17     
+003C 80FE             18     OVER: SJMP OVER
+                      19     
+                      20     END
+A51 MACRO ASSEMBLER  ADDELEMENT                                                           05/17/2026 00:00:49 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+OVER . . . . . . .  C ADDR   003CH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
