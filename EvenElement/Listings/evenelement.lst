@@ -1,0 +1,42 @@
+A51 MACRO ASSEMBLER  EVENELEMENT                                                          05/16/2026 14:04:14 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\evenelement.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE evenelement.s SET(SMALL) DEBUG PRINT(.\Listings\evenelement.lst) OBJECT
+                      (.\Objects\evenelement.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 802E              2     SJMP 0030H
+0030                   3     ORG 0030H
+0030 7830              4     MOV R0, #30H
+0032 7940              5     MOV R1, #40H
+0034 7A04              6     MOV R2, #04H
+0036 E6                7     BACK:MOV A, @R0
+0037 30E702            8              JNB ACC.7, SKIP
+003A F7                9              MOV @R1,A
+003B 09               10              INC R1
+003C 08               11     SKIP:INC R0
+003D DAF7             12              DJNZ R2,BACK
+003F 80FE             13     HERE:SJMP HERE
+                      14              END
+A51 MACRO ASSEMBLER  EVENELEMENT                                                          05/16/2026 14:04:14 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ACC. . . . . . . .  D ADDR   00E0H   A   
+BACK . . . . . . .  C ADDR   0036H   A   
+HERE . . . . . . .  C ADDR   003FH   A   
+SKIP . . . . . . .  C ADDR   003CH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

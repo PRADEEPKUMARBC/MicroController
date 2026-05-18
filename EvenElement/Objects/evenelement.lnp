@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\evenelement.obj" 
+TO ".\Objects\evenelement" 
+PRINT(".\Listings\evenelement.m51")
