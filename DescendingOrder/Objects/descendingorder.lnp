@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\descendingorder.obj" 
+TO ".\Objects\descendingorder" 
+PRINT(".\Listings\descendingorder.m51")
