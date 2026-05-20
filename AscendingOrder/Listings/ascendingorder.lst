@@ -1,0 +1,49 @@
+A51 MACRO ASSEMBLER  ASCENDINGORDER                                                       05/16/2026 22:41:14 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\ascendingorder.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE ascendingorder.s SET(SMALL) DEBUG PRINT(.\Listings\ascendingorder.lst) 
+                      OBJECT(.\Objects\ascendingorder.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 802E              2     SJMP 0030H
+0030                   3     ORG 0030H
+0030 7904              4     MOV R1, #04H
+0032 7830              5     MAIN:MOV R0, #30H
+0034 7A04              6              MOV R2, #04H
+0036 E6                7     UP:MOV A,@R0
+0037 08                8              INC R0
+0038 86F0              9              MOV B, @R0
+003A B5F000           10              CJNE A,B,NEXT
+003D 4005             11     NEXT:JC NOEXCHANGE
+003F F6               12              MOV @R0,A
+0040 18               13              DEC R0
+0041 A6F0             14              MOV @R0,B
+0043 08               15              INC R0
+0044 DAF0             16     NOEXCHANGE:DJNZ R2,UP
+0046 D9EA             17              DJNZ R1, MAIN
+0048 80FE             18     HERE:SJMP HERE
+                      19              END
+A51 MACRO ASSEMBLER  ASCENDINGORDER                                                       05/16/2026 22:41:14 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+HERE . . . . . . .  C ADDR   0048H   A   
+MAIN . . . . . . .  C ADDR   0032H   A   
+NEXT . . . . . . .  C ADDR   003DH   A   
+NOEXCHANGE . . . .  C ADDR   0044H   A   
+UP . . . . . . . .  C ADDR   0036H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
