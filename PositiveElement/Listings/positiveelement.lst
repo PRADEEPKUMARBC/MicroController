@@ -1,0 +1,26 @@
+C51 COMPILER V9.60.7.0   POSITIVEELEMENT                                                   05/16/2026 13:07:28 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE POSITIVEELEMENT
+OBJECT MODULE PLACED IN .\Objects\positiveelement.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE positiveelement.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Li
+                    -stings\positiveelement.lst) TABS(2) OBJECT(.\Objects\positiveelement.obj)
+
+line level    source
+
+   1          ORG 0000H
+*** ERROR C129 IN LINE 1 OF positiveelement.c: missing ';' before '0000'
+   2          SJMP 0030H
+   3          ORG 0030H
+   4          MOV R0, #30H
+   5          MOV R1, #40H
+   6          MOV R2, #05H
+   7          BACK: MOV A, @R0
+   8          JB ACC.7, SKIP
+   9          INC R1
+  10          SKIP: INC R0
+  11          DJNZ R2, BACK
+  12          HERE:SJMP HERE
+  13          END
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  1 ERROR(S)

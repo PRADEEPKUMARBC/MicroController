@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\positivelement.obj" 
+TO ".\Objects\positiveelement" 
+PRINT(".\Listings\positiveelement.m51")
