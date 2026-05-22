@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\negativelemnt.obj" 
+TO ".\Objects\negativelemnt" 
+PRINT(".\Listings\negativelemnt.m51")

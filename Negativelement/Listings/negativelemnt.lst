@@ -1,0 +1,47 @@
+A51 MACRO ASSEMBLER  NEGATIVELEMNT                                                        05/16/2026 13:39:28 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\negativelemnt.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE negativelemnt.s SET(SMALL) DEBUG PRINT(.\Listings\negativelemnt.lst) OB
+                      JECT(.\Objects\negativelemnt.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 802E              2     SJMP 0030H
+                       3     
+0030                   4     ORG 0030H
+                       5     
+0030 7830              6     MOV R0, #30H      ; Input data starts from 30H
+0032 756500            7     MOV 65H, #00H     ; Store negative count at 65H
+0035 7A05              8     MOV R2, #05H      ; Number of elements
+                       9     
+0037 E6               10     BACK: MOV A, @R0
+0038 30E702           11           JNB ACC.7, SKIP   ; If positive, skip
+003B 0565             12           INC 65H           ; Increment negative count
+                      13     
+003D 08               14     SKIP: INC R0
+003E DAF7             15           DJNZ R2, BACK
+                      16     
+0040 80FE             17     HERE: SJMP HERE
+                      18     
+                      19     END
+A51 MACRO ASSEMBLER  NEGATIVELEMNT                                                        05/16/2026 13:39:28 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ACC. . . . . . . .  D ADDR   00E0H   A   
+BACK . . . . . . .  C ADDR   0037H   A   
+HERE . . . . . . .  C ADDR   0040H   A   
+SKIP . . . . . . .  C ADDR   003DH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
