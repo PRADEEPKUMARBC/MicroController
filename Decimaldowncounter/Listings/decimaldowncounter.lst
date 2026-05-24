@@ -1,0 +1,48 @@
+A51 MACRO ASSEMBLER  DECIMALDOWNCOUNTER                                                   05/21/2026 19:29:45 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\decimaldowncounter.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE decimaldowncounter.s SET(SMALL) DEBUG PRINT(.\Listings\decimaldowncount
+                      er.lst) OBJECT(.\Objects\decimaldowncounter.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H 
+0000 802E              2     SJMP 30H 
+0030                   3     ORG 30H 
+0030 7400              4     MOV A,#00 
+0032 113B              5     BACK:ACALL DELAY 
+0034 2499              6     ADD A,#99H 
+0036 D4                7     DA A  
+0037 70F9              8     JNZ BACK 
+0039 80FE              9      HERE: SJMP HERE 
+                      10     
+003B 79FF             11     DELAY: MOV R1,#0FFH  
+003D 7AFF             12       LABEL2:MOV R2,#0FFH 
+003F 7BFF             13       LABEL1:MOV R3,#0FFH 
+0041 DBFE             14        LABEL:DJNZ R3, LABEL
+0043 DAFA             15                      DJNZ R2,LABEL1 
+0045 D9F6             16                      DJNZ R1,LABEL2 
+0047 22               17                      RET 
+                      18                      END
+A51 MACRO ASSEMBLER  DECIMALDOWNCOUNTER                                                   05/21/2026 19:29:45 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+BACK . . . . . . .  C ADDR   0032H   A   
+DELAY. . . . . . .  C ADDR   003BH   A   
+HERE . . . . . . .  C ADDR   0039H   A   
+LABEL. . . . . . .  C ADDR   0041H   A   
+LABEL1 . . . . . .  C ADDR   003FH   A   
+LABEL2 . . . . . .  C ADDR   003DH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

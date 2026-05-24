@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\decimaldowncounter.obj" 
+TO ".\Objects\decimaldowncounter" 
+PRINT(".\Listings\decimaldowncounter.m51")
