@@ -1,0 +1,47 @@
+A51 MACRO ASSEMBLER  DECIMALUPCOUNTER                                                     05/21/2026 19:24:13 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\decimalupcounter.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE decimalupcounter.s SET(SMALL) DEBUG PRINT(.\Listings\decimalupcounter.l
+                      st) OBJECT(.\Objects\decimalupcounter.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0H 
+0000 802E              2     SJMP 30H 
+0030                   3     ORG 30H 
+0030 7400              4     MOV A, #00 
+0032 1139              5     BACK: ACALL DELAY 
+0034 14                6     DEC A 
+0035 70FB              7     JNZ BACK 
+0037 80FE              8      HERE: SJMP HERE 
+                       9     
+0039 79FF             10       DELAY: MOV R1,#0FFH  
+003B 7AFF             11       LABEL2:MOV R2,#0FFH 
+003D 7BFF             12       LABEL1:MOV R3,#0FFH 
+003F DBFE             13        LABEL:DJNZ R3, LABEL
+0041 DAFA             14                      DJNZ R2,LABEL1 
+0043 D9F6             15                      DJNZ R1,LABEL2 
+0045 22               16                      RET 
+                      17                      END
+A51 MACRO ASSEMBLER  DECIMALUPCOUNTER                                                     05/21/2026 19:24:13 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+BACK . . . . . . .  C ADDR   0032H   A   
+DELAY. . . . . . .  C ADDR   0039H   A   
+HERE . . . . . . .  C ADDR   0037H   A   
+LABEL. . . . . . .  C ADDR   003FH   A   
+LABEL1 . . . . . .  C ADDR   003DH   A   
+LABEL2 . . . . . .  C ADDR   003BH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
