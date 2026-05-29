@@ -1,0 +1,37 @@
+C51 COMPILER V9.60.7.0   FACTORIALNUMBER                                                   05/16/2026 23:13:25 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE FACTORIALNUMBER
+OBJECT MODULE PLACED IN .\Objects\factorialnumber.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE factorialnumber.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Li
+                    -stings\factorialnumber.lst) TABS(2) OBJECT(.\Objects\factorialnumber.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          void main()
+   3          {
+   4   1        unsigned int i, n, fact;
+   5   1        n = P0;
+   6   1        fact = 1;
+   7   1        for (i=1; i<=n; i++)
+   8   1        {
+   9   2          fact = i * fact;
+  10   2          P1 = fact;
+  11   2        }
+  12   1        P2 = fact;
+  13   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     43    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

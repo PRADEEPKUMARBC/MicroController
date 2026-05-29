@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\factorialnumber.obj" 
+TO ".\Objects\factorialnumber" 
+PRINT(".\Listings\factorialnumber.m51")
