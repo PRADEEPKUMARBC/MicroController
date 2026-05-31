@@ -1,0 +1,54 @@
+C51 COMPILER V9.60.7.0   ASSIGNMENT                                                        05/30/2026 23:30:04 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE ASSIGNMENT
+OBJECT MODULE PLACED IN .\Objects\assignment.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE assignment.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listing
+                    -s\assignment.lst) TABS(2) OBJECT(.\Objects\assignment.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          
+   3          sbit pulse = P1^0;   
+   4          
+   5          void delay200us(void);
+   6          void delay300us(void);
+   7          
+   8          void main()
+   9          {
+  10   1          while(1)
+  11   1          {
+  12   2              pulse = 1;       
+  13   2              delay200us();    
+  14   2      
+  15   2              pulse = 0;       
+  16   2              delay300us();    
+  17   2          }
+  18   1      }
+  19          
+  20          void delay200us(void)
+  21          {
+  22   1          unsigned int i;
+  23   1          for(i = 0; i < 60; i++);
+  24   1      }
+  25          
+  26          void delay300us(void)
+  27          {
+  28   1          unsigned int i;
+  29   1          for(i = 0; i < 90; i++);
+  30   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     42    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
