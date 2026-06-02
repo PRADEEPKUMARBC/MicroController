@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\sumoff10int.obj" 
+TO ".\Objects\sumoff10int" 
+PRINT(".\Listings\sumoff10int.m51")
