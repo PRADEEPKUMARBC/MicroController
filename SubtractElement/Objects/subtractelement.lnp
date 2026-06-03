@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\subtractelement.obj" 
+TO ".\Objects\subtractelement" 
+PRINT(".\Listings\subtractelement.m51")

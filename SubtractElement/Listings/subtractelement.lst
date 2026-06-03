@@ -1,0 +1,41 @@
+A51 MACRO ASSEMBLER  SUBTRACTELEMENT                                                      05/17/2026 00:11:13 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\subtractelement.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE subtractelement.s SET(SMALL) DEBUG PRINT(.\Listings\subtractelement.lst
+                      ) OBJECT(.\Objects\subtractelement.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 802E              2     SJMP 0030H
+0030                   3     ORG 0030H
+0030 7834              4     MOV R0, #34H
+0032 7935              5     MOV R1, #35H
+0034 E6                6     MOV A, @R0
+0035 C3                7     CLR C
+0036 97                8     SUBB A, @R1
+                       9     
+0037 FD               10     MOV R5,A
+                      11     
+0038 7400             12     MOV A, #00H
+003A 3400             13     ADDC A, #00H
+003C FE               14     MOV R6,A
+003D 80FE             15     HERE:SJMP HERE
+                      16     END
+A51 MACRO ASSEMBLER  SUBTRACTELEMENT                                                      05/17/2026 00:11:13 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+HERE . . . . . . .  C ADDR   003DH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
