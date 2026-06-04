@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\squareofnumber.obj" 
+TO ".\Objects\squareofnumber" 
+PRINT(".\Listings\squareofnumber.m51")

@@ -1,0 +1,39 @@
+C51 COMPILER V9.60.7.0   SQUAREOFNUMBER                                                    05/16/2026 23:25:25 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE SQUAREOFNUMBER
+OBJECT MODULE PLACED IN .\Objects\squareofnumber.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE squareofnumber.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Lis
+                    -tings\squareofnumber.lst) TABS(2) OBJECT(.\Objects\squareofnumber.obj)
+
+line level    source
+
+   1          # include<reg51.h>
+   2          void main()
+   3          {
+   4   1        unsigned char i, num;
+   5   1        unsigned int squares[10]={1,4,9,16,25,36,49,64,81,100};
+   6   1        num = P0;
+   7   1        for(i = 0; i < 10; i++)
+   8   1        {
+   9   2          if(num == i + 1)
+  10   2          {
+  11   3            P1 = squares[i];
+  12   3            break;
+  13   3          }
+  14   2        }
+  15   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     56    ----
+   CONSTANT SIZE    =     20    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      20
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
