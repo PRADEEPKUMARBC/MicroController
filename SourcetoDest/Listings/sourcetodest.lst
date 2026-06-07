@@ -1,0 +1,44 @@
+A51 MACRO ASSEMBLER  SOURCETODEST                                                         05/17/2026 10:24:15 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\sourcetodest.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE sourcetodest.s SET(SMALL) DEBUG PRINT(.\Listings\sourcetodest.lst) OBJE
+                      CT(.\Objects\sourcetodest.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 802E              2     SJMP 0030H
+0030                   3     ORG 0030H
+0030 758320            4     MOV DPH, #20H
+0033 7800              5     MOV R0, #00H
+0035 7950              6     MOV R1, #50H
+0037 7A0A              7     MOV R2, #0AH
+0039 8882              8     BACK:MOV DPL, R0
+003B E0                9              MOVX A, @DPTR
+003C 8982             10              MOV DPL, R1
+003E F0               11              MOVX @DPTR,A
+003F 08               12              INC R0
+0040 09               13              INC R1
+0041 DAF6             14              DJNZ R2, BACK
+0043 80FE             15     HERE:SJMP HERE
+                      16              END
+A51 MACRO ASSEMBLER  SOURCETODEST                                                         05/17/2026 10:24:15 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+BACK . . . . . . .  C ADDR   0039H   A   
+DPH. . . . . . . .  D ADDR   0083H   A   
+DPL. . . . . . . .  D ADDR   0082H   A   
+HERE . . . . . . .  C ADDR   0043H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

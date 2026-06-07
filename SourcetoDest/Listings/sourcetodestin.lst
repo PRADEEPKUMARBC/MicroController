@@ -1,0 +1,55 @@
+A51 MACRO ASSEMBLER  SOURCETODESTIN                                                       05/17/2026 10:35:22 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\sourcetodestin.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE sourcetodestin.a51 SET(SMALL) DEBUG PRINT(.\Listings\sourcetodestin.lst
+                      ) OBJECT(.\Objects\sourcetodestin.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 802E              2     SJMP 0030H
+                       3     
+0030                   4     ORG 0030H
+                       5     
+0030 758320            6     MOV DPH, #20H     ; High byte of external memory address
+                       7     
+0033 7800              8     MOV R0, #00H      ; Source lower byte = 00H
+0035 7950              9     MOV R1, #50H      ; Destination lower byte = 50H
+0037 7A0A             10     MOV R2, #0AH      ; Count = 10 bytes
+                      11     
+0039                  12     BACK:
+0039 8882             13         MOV DPL, R0   ; DPTR = 2000H + R0
+003B E0               14         MOVX A, @DPTR ; Read from source
+                      15     
+003C 8982             16         MOV DPL, R1   ; DPTR = 2050H + R1
+003E F0               17         MOVX @DPTR, A ; Write to destination
+                      18     
+003F 08               19         INC R0
+0040 09               20         INC R1
+                      21     
+0041 DAF6             22         DJNZ R2, BACK
+                      23     
+0043                  24     HERE:
+0043 80FE             25         SJMP HERE
+                      26     
+                      27     END
+A51 MACRO ASSEMBLER  SOURCETODESTIN                                                       05/17/2026 10:35:22 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+BACK . . . . . . .  C ADDR   0039H   A   
+DPH. . . . . . . .  D ADDR   0083H   A   
+DPL. . . . . . . .  D ADDR   0082H   A   
+HERE . . . . . . .  C ADDR   0043H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

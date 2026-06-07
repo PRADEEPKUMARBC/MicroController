@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\sourcetodestin.obj" 
+TO ".\Objects\sourcetodest" 
+PRINT(".\Listings\sourcetodest.m51")
