@@ -1,0 +1,45 @@
+C51 COMPILER V9.60.7.0   S                                                                 06/01/2026 20:56:05 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE S
+OBJECT MODULE PLACED IN .\Objects\s.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE s.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\s.lst) 
+                    -TABS(2) OBJECT(.\Objects\s.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          
+   3          sbit Wave = P1^0;
+   4          
+   5          void Delay(void)
+   6          {
+   7   1          unsigned int i;
+   8   1          for(i = 0; i < 50000; i++);
+   9   1      }
+  10          
+  11          void main(void)
+  12          {
+  13   1          while(1)
+  14   1          {
+  15   2              Wave = 1;
+  16   2              Delay();
+  17   2      
+  18   2              Wave = 0;
+  19   2              Delay();
+  20   2          }
+  21   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     38    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
