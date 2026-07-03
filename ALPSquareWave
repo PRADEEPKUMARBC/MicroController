@@ -1,0 +1,13 @@
+#include<reg51.h>
+void_delay()
+{
+unsigned char WAVEVALUES[12] = {128,192,238,255,192,128,60,7,0,7,64};
+unsigned char x;
+while(1)
+{
+for(i=0; i<12; i++);
+{
+DACDATA = WAVEVALUE[x]
+}
+}
+}
